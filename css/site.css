@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
 :root{
     --primary-color: #1d5888;
     --secondary-color: #ff993b;
@@ -43,8 +43,18 @@ main>.container {
     width: 100% ;
 }
 .img-text{
-    font-size: 40px;
-    font-family: 'Faster One', cursive;
+    font-size: 5em;
+    font-family: 'Passion One', cursive;
+   
+}
+
+.img-text span{
+    color: #fff;
+}
+.side-image{
+    background-image: url(/img/bg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
 }
 .jsicon{
     color: rgb(226,211,4)
