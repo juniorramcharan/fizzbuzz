@@ -1,49 +1,39 @@
 //get values from the interface
 function getValues(){
     //get values from the page
-        let startValue = document.getElementById('startValue').value;
-        let endValue = document.getElementById('endValue').value;
+        let fizzValue = document.getElementById('startValue').value;
+        let buzzValue = document.getElementById('endValue').value;
         
 
     //call generate numbers
-   let numbers = generateNumbers(startValue, endValue);
+   let numbers = fizzBuzz(fizzValue, buzzValue);
 
     //call display numbers
     displayNumbers(numbers);
 }
 //gererate numbers from start value to end value
-function generateNumbers(start, end){
- let numbers = [];
-    for(let i=start; i<=end; i++){
-         numbers.push(i);
+function fizzBuzz(fizz, buzz){
+ let fizzArray = [];
+    for(let i=1; i<=20; i++){
+        if((i % fizz == 0  )&& (i % buzz == 0 )){
+            fizzArray.push("fizzbuzz");
+        }else if((i % fizz) == 0){
+            fizzArray.push("fizz");
+        }else if((i % buzz) == 0){
+            fizzArray.push("buzz");
+        }else{
+            fizzArray.push(i);
+        }
+         
     }
-    return numbers;
+    return fizzArray;
 }
 
 //display numbers and mark even numbers bold
-function displayNumbers(numbers){
-    let templateRows = "";
-    let templateCols ="";
-
-    for (let i = 0; i < numbers.length; i++) {
-        let number = numbers[i];
-        for (let j = 0; j < 5; j++) {
-            
-            if((number % 3 == 0  )&& (number % 5 == 0 )){
-                templateCols += `<td> fizz buzz</td>`;
-            }else if((number % 3 == 0)&&(number % 5 != 0)){
-                templateCols += `<td> fizz </td>`;
-            }else if((number % 5 == 0)&&(number % 3 != 0)){
-                templateCols += `<td> buzz </td>`;
-            }else{
-                templateCols += `<td>${numbers[i]} </td>`;
-            }
-            
-           
-        }
-        
-       
+function displayNumbers(myValues){
+    let templateRows = "" ;
+    for (let index = 0; index <= myValues.length; index++) {
+        templateRows += document.getElementById('results').innerHTML= `<tr><td>${myValues[index]}</td></tr>`;        
     }
-    templateRows = `<tr>${templateCols}</tr>`;
-    document.getElementById('results').innerHTML    = templateRows;
+    
 }
