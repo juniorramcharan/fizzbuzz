@@ -14,6 +14,18 @@ body{
 nav{
     background-color: var(--dark-color);
 }
+.fizz{
+    color: green;
+    font-weight: bold;
+}
+.buzz{
+    color: blue;
+    font-weight: bold;
+}
+.fizzbuzz{
+    color: red;
+    font-weight: bold;
+}
 footer{
     background-color: var(--dark-color);
     background: CR
@@ -74,5 +86,5 @@ main>.container {
     color: var(--secondary-color);
 }
 .footer-text{
-    font-size:
+    font-size:25px;
 }
